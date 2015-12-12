@@ -12,14 +12,13 @@
 /Users/zuziakaxel/Development/Geant4/projects/fh/CMakeFiles/3.4.1/CMakeSystem.cmake\
 /Users/zuziakaxel/Development/Geant4/projects/fh/CMakeFiles/feature_tests.c\
 /Users/zuziakaxel/Development/Geant4/projects/fh/CMakeFiles/feature_tests.cxx\
-/Users/zuziakaxel/Documents/geant4.10.01/examples/basic/B3/CMakeLists.txt\
-/Users/zuziakaxel/Documents/geant4.10.01/examples/basic/B3/debug.mac\
-/Users/zuziakaxel/Documents/geant4.10.01/examples/basic/B3/exampleB3.in\
-/Users/zuziakaxel/Documents/geant4.10.01/examples/basic/B3/exampleB3.out\
-/Users/zuziakaxel/Documents/geant4.10.01/examples/basic/B3/init_vis.mac\
-/Users/zuziakaxel/Documents/geant4.10.01/examples/basic/B3/run1.mac\
-/Users/zuziakaxel/Documents/geant4.10.01/examples/basic/B3/run2.mac\
-/Users/zuziakaxel/Documents/geant4.10.01/examples/basic/B3/vis.mac\
+/Users/zuziakaxel/Development/Geant4/projects/fh/CMakeLists.txt\
+/Users/zuziakaxel/Development/Geant4/projects/fh/exampleB1.in\
+/Users/zuziakaxel/Development/Geant4/projects/fh/exampleB1.out\
+/Users/zuziakaxel/Development/Geant4/projects/fh/init_vis.mac\
+/Users/zuziakaxel/Development/Geant4/projects/fh/run1.mac\
+/Users/zuziakaxel/Development/Geant4/projects/fh/run2.mac\
+/Users/zuziakaxel/Development/Geant4/projects/fh/vis.mac\
 /opt/local/share/cmake-3.4/Modules/CMakeCCompiler.cmake.in\
 /opt/local/share/cmake-3.4/Modules/CMakeCCompilerABI.c\
 /opt/local/share/cmake-3.4/Modules/CMakeCInformation.cmake\
@@ -100,4 +99,4 @@
 /opt/local/share/cmake-3.4/Modules/Platform/Darwin-Initialize.cmake\
 /opt/local/share/cmake-3.4/Modules/Platform/Darwin.cmake\
 /opt/local/share/cmake-3.4/Modules/Platform/UnixPaths.cmake
-	/opt/local/bin/cmake -H/Users/zuziakaxel/Documents/geant4.10.01/examples/basic/B3 -B/Users/zuziakaxel/Development/Geant4/projects/fh
+	/opt/local/bin/cmake -H/Users/zuziakaxel/Development/Geant4/projects/fh -B/Users/zuziakaxel/Development/Geant4/projects/fh
