@@ -1,5 +1,5 @@
 dependencies: \
-  /Users/zuziakaxel/Development/Geant4/projects/fh/FHPrimaryGeneratorAction.cc \
+  /Users/zuziakaxel/Development/Geant4/projects/FH/FHPrimaryGeneratorAction.cc \
   /Users/zuziakaxel/Development/Geant4/projects/fh/FHPrimaryGeneratorAction.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/run/include/G4VUserPrimaryGeneratorAction.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ThreeVector.hh \

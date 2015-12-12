@@ -25,3 +25,9 @@ http://hyperphysics.phy-astr.gsu.edu/hbase/FrHz.html#FH
 Note that run.mac file should be in `debug` folder.
 or simply:
 `./exampleB1 run.mac`
+
+
+####Environment variables needed:
+
+- *G4ENSDFSTATEDATA* : `path/to/G4ENSDFSTATE1.2`
+- *G4LEDATA* : `path/to/G4EMLOW6.48`
