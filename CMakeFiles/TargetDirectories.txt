@@ -1,0 +1,4 @@
+/Users/zuziakaxel/Development/Geant4/projects/fh/CMakeFiles/ALL_BUILD.dir
+/Users/zuziakaxel/Development/Geant4/projects/fh/CMakeFiles/B3.dir
+/Users/zuziakaxel/Development/Geant4/projects/fh/CMakeFiles/ZERO_CHECK.dir
+/Users/zuziakaxel/Development/Geant4/projects/fh/CMakeFiles/exampleB3.dir
