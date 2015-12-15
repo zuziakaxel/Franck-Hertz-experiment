@@ -262,4 +262,8 @@ dependencies: \
   /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/solids/CSG/include/G4Tubs.icc \
   /Users/zuziakaxel/Development/Geant4/geant4/source/graphics_reps/include/G4VisAttributes.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/graphics_reps/include/G4Color.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/graphics_reps/include/G4VisAttributes.icc
+  /Users/zuziakaxel/Development/Geant4/geant4/source/graphics_reps/include/G4VisAttributes.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/materials/include/G4NistManager.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/materials/include/G4NistElementBuilder.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/materials/include/G4NistMaterialBuilder.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4Pow.hh

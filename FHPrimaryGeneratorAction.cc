@@ -9,7 +9,7 @@
 #include "G4PhysicalConstants.hh"
 
 FHPrimaryGeneratorAction::FHPrimaryGeneratorAction() {
-    G4int n_particle = 1;
+    G4int n_particle = 1000;
     particleGun  = new G4ParticleGun(n_particle);
     
     G4ParticleTable* particleTable = G4ParticleTable::GetParticleTable();
@@ -19,7 +19,7 @@ FHPrimaryGeneratorAction::FHPrimaryGeneratorAction() {
     
     particleGun->SetParticleDefinition(particle);
     particleGun->SetParticleMomentumDirection(G4ThreeVector(0.,0.,1.));
-    particleGun->SetParticleEnergy(15.*MeV);
+    particleGun->SetParticleEnergy(15.*eV);
     particleGun->SetParticlePosition(G4ThreeVector(0.,0.,-10.*cm));
 }
 

@@ -8,7 +8,7 @@
 #include "G4RunManager.hh"
 #include "G4Tubs.hh"
 #include "G4VisAttributes.hh"
-
+#include "G4NistManager.hh"
 
 FHDetectorConstruction::FHDetectorConstruction()
 :fpWorldLogical(0)
@@ -57,6 +57,10 @@ void FHDetectorConstruction::DefineMaterials()
     
     vacuum->AddMaterial(air, fractionmass=1.);
     
+    //Mercury
+    G4NistManager *nistman = G4NistManager::Instance();
+    nistman->FindOrBuildElement(20);
+    new G4Material("Mercury", 20., 200.59*g/mole, 8*g/cm3);
     // Dump material information
     G4cout << *(G4Material::GetMaterialTable()) << G4endl;
 }
@@ -64,14 +68,15 @@ void FHDetectorConstruction::DefineMaterials()
 void FHDetectorConstruction::SetupGeometry()
 {
     // NIST definition of air
-    G4Material* air = G4Material::GetMaterial("Air");
+    G4Material* mercury = G4Material::GetMaterial("Mercury");
+//    G4Material* mercury = new G4Material("Mercury", 20., 200.59*g/mole, 8*g/cm3);
     
     // World volume
     G4Box* worldSolid = new G4Box("World_Solid",           // Name
                                   2.0*m, 2.0*m, 2.0*m);    // Half lengths
     
     fpWorldLogical = new G4LogicalVolume(worldSolid,	 // Solid
-                                         air,	         // Material
+                                         mercury,	         // Material
                                          "World_Logical"); // Name
     
     fpWorldPhysical = new G4PVPlacement(0,	         // Rotation matrix pointer
@@ -81,34 +86,31 @@ void FHDetectorConstruction::SetupGeometry()
                                         0,		 // Mother volume
                                         false,		 // Unused boolean parameter
                                         0);		 // Copy number
-    ////////////////////////////////////////////////////////////////////////
-    // Beam Window (BW)
-    G4Material* titanium = G4Material::GetMaterial("Titanium");
-    
-    G4VSolid* beamWindowSolid = new G4Tubs("BeamWindow_Solid", 0.*cm, 2.0*cm,
-                                           0.0065*cm, 0.*deg, 360.*deg);
-    
-    G4LogicalVolume* beamWindowLogical =
-    new G4LogicalVolume(beamWindowSolid, titanium, "BeamWindow_Logical");
-    
-    new G4PVPlacement(0, G4ThreeVector(0.,0.,-(3.0*cm+ 0.0065*cm)),
-                      beamWindowLogical, "BeamWindow_Physical",
-                      fpWorldLogical, false, 0);
     
     ////////////////////////////////////////////////////////////////////////
-    // Beam Pipe
-    G4Material* vacuum = G4Material::GetMaterial("Vacuum");
+    // - Katode (-)
+    //TODO: Change material for elements below!
     
-    G4VSolid* beamPipeSolid = new G4Tubs("BeamPipe_Solid", 0.*cm, 5.0*cm, 5.0*cm,
-                                         0.*deg, 360.*deg);
+    G4Material* titan = G4Material::GetMaterial("Titanium");
+    G4Box* katode = new G4Box("katode_solid", 2.5*cm , 5.0*cm, 0.1*cm);
     
-    G4LogicalVolume* beamPipeLogical =
-    new G4LogicalVolume(beamPipeSolid, vacuum, "BeamPipe_Logical");
+    G4LogicalVolume *katodeLogical = new G4LogicalVolume(katode, titan, "katode_logical");
+    new G4PVPlacement(0, G4ThreeVector(0.,0.,-(20*cm)), katodeLogical, "katode_physical", fpWorldLogical, false, 0);
     
-    new G4PVPlacement(0, G4ThreeVector(0.,0., -(3.013*cm+5.0*cm)),
-                      beamPipeLogical, "BeamPipe_Physical",
-                      fpWorldLogical, false, 0);
+    // Grid (+)
     
+    G4Box* grid = new G4Box("grid_solid", 2.5*cm , 5.0*cm, 0.1*cm);
+    
+    G4LogicalVolume *gridLogical = new G4LogicalVolume(grid, titan, "grid_logical");
+    new G4PVPlacement(0, G4ThreeVector(0.,0.,16.*cm), gridLogical, "grid_physical", fpWorldLogical, false, 0);
+    
+    
+    // Anode
+
+    G4Box* anode = new G4Box("anode_solid", 2.5*cm , 5.0*cm, 0.1*cm);
+    
+    G4LogicalVolume *anodeLogical = new G4LogicalVolume(anode, titan, "anode_logical");
+    new G4PVPlacement(0, G4ThreeVector(0.,0.,20.*cm), anodeLogical, "anode_physical", fpWorldLogical, false, 0);
     
     ////////////////////////////////////////////////////////////////////////
     // Visualisation attributes
@@ -116,13 +118,14 @@ void FHDetectorConstruction::SetupGeometry()
     // Invisible world volume.
     fpWorldLogical->SetVisAttributes(G4VisAttributes::Invisible);
     
-    // Beam Window - brown
-    G4VisAttributes* beamWindowAttributes = new G4VisAttributes(G4Colour(0.5,0.0,0.0,1.0));
-    beamWindowAttributes->SetForceSolid(true);
-    beamWindowLogical->SetVisAttributes(beamWindowAttributes);
-    //
-    // Beam Pipe Vacuum - yellow
-    G4VisAttributes* beamPipeAttributes = new G4VisAttributes(G4Colour::Yellow());
-    //beamPipeAttributes->SetForceSolid(true);
-    beamPipeLogical->SetVisAttributes(beamPipeAttributes);
+    
+    // Vis attributes
+    G4VisAttributes* katodeAttributes = new G4VisAttributes(G4Colour::Red());
+    katodeLogical->SetVisAttributes(katodeAttributes);
+    
+    G4VisAttributes* gridAttributes = new G4VisAttributes(G4Colour::Gray());
+    gridLogical->SetVisAttributes(gridAttributes);
+    
+    G4VisAttributes* anodeAttributes = new G4VisAttributes(G4Colour::Blue());
+    anodeLogical->SetVisAttributes(anodeAttributes);
 }
