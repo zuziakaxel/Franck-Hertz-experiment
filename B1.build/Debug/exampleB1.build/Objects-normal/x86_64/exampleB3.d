@@ -241,6 +241,34 @@ dependencies: \
   /Users/zuziakaxel/Development/Geant4/geant4/source/run/include/G4VUserDetectorConstruction.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4SystemOfUnits.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4PhysicalConstants.hh \
+  /Users/zuziakaxel/Development/Geant4/projects/fh/FHAcceleratingElectricField.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ElectricField.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ElectroMagneticField.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4Field.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4UniformElectricField.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4TransportationManager.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4SafetyHelper.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4TransportationManager.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4FieldManager.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4FieldManager.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4EqMagElectricField.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ChargeState.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4EquationOfMotion.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4EquationOfMotion.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ClassicalRK4.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4MagErrorStepper.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4MagIntegratorStepper.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4MagIntegratorStepper.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4Mag_EqRhs.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4MagErrorStepper.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ChordFinder.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4MagIntegratorDriver.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4FieldTrack.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4FieldTrack.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4MagIntegratorDriver.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ChordFinder.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4Cache.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4CacheDetails.hh \
   /Users/zuziakaxel/Development/Geant4/projects/fh/FHPhysicsList.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/run/include/G4VUserPhysicsList.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/run/include/rundefs.hh \

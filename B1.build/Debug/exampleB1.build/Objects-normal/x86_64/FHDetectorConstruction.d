@@ -14,25 +14,20 @@ dependencies: \
   /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Units/SystemOfUnits.h \
   /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4PhysicalConstants.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Units/PhysicalConstants.h \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/solids/CSG/include/G4Box.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/solids/CSG/include/G4CSGSolid.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4VSolid.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/global/HEPGeometry/include/geomdefs.hh \
+  /Users/zuziakaxel/Development/Geant4/projects/fh/FHAcceleratingElectricField.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ElectricField.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ElectroMagneticField.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4Field.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4UniformElectricField.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ThreeVector.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Vector/ThreeVector.h \
   /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Utility/defs.h \
   /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Vector/ThreeVector.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4VSolid.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/graphics_reps/include/G4Polyhedron.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/graphics_reps/include/HepPolyhedron.h \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/global/HEPGeometry/include/G4Point3D.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Geometry/Point3D.h \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Geometry/BasicVector3D.h \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/global/HEPGeometry/include/G4Normal3D.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Geometry/Normal3D.h \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/global/HEPGeometry/include/G4Transform3D.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Geometry/Transform3D.h \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Geometry/Transform3D.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4TransportationManager.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4Navigator.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/HEPGeometry/include/geomdefs.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4AffineTransform.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4RotationMatrix.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Vector/Rotation.h \
   /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Vector/RotationInterfaces.h \
   /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Vector/LorentzVector.h \
@@ -47,11 +42,7 @@ dependencies: \
   /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Vector/RotationZ.h \
   /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Vector/RotationZ.icc \
   /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Vector/Rotation.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Geometry/Vector3D.h \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/graphics_reps/include/G4Visible.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/graphics_reps/include/G4Visible.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/solids/CSG/include/G4Box.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/graphics_reps/include/G4Colour.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4AffineTransform.icc \
   /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4LogicalVolume.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4Region.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4GeomSplitter.hh \
@@ -60,9 +51,92 @@ dependencies: \
   /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4Threading.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4Region.icc \
   /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4VPhysicalVolume.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4RotationMatrix.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4VPhysicalVolume.icc \
   /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4LogicalVolume.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4GRSVolume.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4VTouchable.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4VTouchable.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4GRSVolume.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4GRSSolid.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4GRSSolid.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4TouchableHandle.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ReferenceCountedHandle.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4Allocator.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4AllocatorPool.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4TouchableHistoryHandle.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4TouchableHistory.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4NavigationHistory.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4NavigationLevel.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4NavigationLevelRep.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4NavigationLevelRep.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4NavigationLevel.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4NavigationHistoryPool.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4NavigationHistory.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4TouchableHistory.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4NormalNavigation.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4VSolid.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4VSolid.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4AuxiliaryNavServices.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4AuxiliaryNavServices.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4NormalNavigation.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4VoxelNavigation.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4NavigationLogger.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4BlockingList.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4BlockingList.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4SmartVoxelProxy.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4SmartVoxelProxy.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4SmartVoxelNode.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4SmartVoxelNode.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4SmartVoxelHeader.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4SmartVoxelHeader.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4VoxelNavigation.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4ParameterisedNavigation.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4VPVParameterisation.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4VVolumeMaterialScanner.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4ParameterisedNavigation.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4ReplicaNavigation.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4ReplicaNavigation.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4RegularNavigation.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4Navigator.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4SafetyHelper.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4TransportationManager.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4FieldManager.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4FieldManager.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4EqMagElectricField.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ChargeState.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4EquationOfMotion.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4EquationOfMotion.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ClassicalRK4.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4MagErrorStepper.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4MagIntegratorStepper.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4MagIntegratorStepper.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4Mag_EqRhs.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4MagErrorStepper.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ChordFinder.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4MagIntegratorDriver.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4FieldTrack.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4FieldTrack.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4MagIntegratorDriver.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ChordFinder.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4Cache.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4CacheDetails.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/solids/CSG/include/G4Box.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/solids/CSG/include/G4CSGSolid.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/graphics_reps/include/G4Polyhedron.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/graphics_reps/include/HepPolyhedron.h \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/HEPGeometry/include/G4Point3D.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Geometry/Point3D.h \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Geometry/BasicVector3D.h \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/HEPGeometry/include/G4Normal3D.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Geometry/Normal3D.h \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/HEPGeometry/include/G4Transform3D.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Geometry/Transform3D.h \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Geometry/Transform3D.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Geometry/Vector3D.h \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/graphics_reps/include/G4Visible.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/graphics_reps/include/G4Visible.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/solids/CSG/include/G4Box.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/graphics_reps/include/G4Colour.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/materials/include/G4Material.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/materials/include/G4Element.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/materials/include/G4Isotope.hh \
@@ -102,8 +176,6 @@ dependencies: \
   /Users/zuziakaxel/Development/Geant4/geant4/source/event/include/G4SmartTrackStack.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/track/include/G4Track.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/track/include/trkdefs.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4Allocator.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4AllocatorPool.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/particles/management/include/G4DynamicParticle.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/particles/management/include/G4ParticleDefinition.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/particles/management/include/G4PDefSplitter.hh \
@@ -114,10 +186,6 @@ dependencies: \
   /Users/zuziakaxel/Development/Geant4/geant4/source/particles/management/include/G4ElectronOccupancy.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/particles/management/include/G4DynamicParticle.icc \
   /Users/zuziakaxel/Development/Geant4/geant4/source/track/include/G4TrackStatus.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4TouchableHandle.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4VTouchable.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4VTouchable.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ReferenceCountedHandle.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/track/include/G4VUserTrackInformation.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4PhysicsModelCatalog.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/track/include/G4Track.icc \
@@ -185,46 +253,6 @@ dependencies: \
   /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Random/RandPoissonQ.icc \
   /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Random/RandStudentT.h \
   /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Random/RandStudentT.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4Navigator.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4AffineTransform.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4AffineTransform.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4GRSVolume.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4GRSVolume.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4GRSSolid.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4GRSSolid.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4TouchableHistoryHandle.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4TouchableHistory.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4NavigationHistory.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4NavigationLevel.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4NavigationLevelRep.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4NavigationLevelRep.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4NavigationLevel.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4NavigationHistoryPool.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4NavigationHistory.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/volumes/include/G4TouchableHistory.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4NormalNavigation.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4AuxiliaryNavServices.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4AuxiliaryNavServices.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4NormalNavigation.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4VoxelNavigation.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4NavigationLogger.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4BlockingList.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4BlockingList.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4SmartVoxelProxy.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4SmartVoxelProxy.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4SmartVoxelNode.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4SmartVoxelNode.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4SmartVoxelHeader.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4SmartVoxelHeader.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4VoxelNavigation.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4ParameterisedNavigation.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4VPVParameterisation.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/management/include/G4VVolumeMaterialScanner.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4ParameterisedNavigation.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4ReplicaNavigation.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4ReplicaNavigation.icc \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4RegularNavigation.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/navigation/include/G4Navigator.icc \
   /Users/zuziakaxel/Development/Geant4/geant4/source/processes/management/include/G4ProcessManager.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/processes/management/include/G4VProcess.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4PhysicsTable.hh \
@@ -266,4 +294,8 @@ dependencies: \
   /Users/zuziakaxel/Development/Geant4/geant4/source/materials/include/G4NistManager.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/materials/include/G4NistElementBuilder.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/materials/include/G4NistMaterialBuilder.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4Pow.hh
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4Pow.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/solids/specific/include/G4Ellipsoid.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/solids/specific/include/G4Ellipsoid.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4AutoDelete.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ThreadLocalSingleton.hh

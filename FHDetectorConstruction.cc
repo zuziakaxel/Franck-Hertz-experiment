@@ -9,6 +9,10 @@
 #include "G4Tubs.hh"
 #include "G4VisAttributes.hh"
 #include "G4NistManager.hh"
+#include "G4Ellipsoid.hh"
+#include "FHAcceleratingElectricField.hh"
+
+#include "G4AutoDelete.hh"
 
 FHDetectorConstruction::FHDetectorConstruction()
 :fpWorldLogical(0)
@@ -24,6 +28,10 @@ G4VPhysicalVolume* FHDetectorConstruction::Construct()
     
     // Geometry Definition
     SetupGeometry();
+    
+    // Field Setup
+    SetupElectricFields();
+    
     
     // Return world volume
     return fpWorldPhysical;
@@ -112,6 +120,17 @@ void FHDetectorConstruction::SetupGeometry()
     G4LogicalVolume *anodeLogical = new G4LogicalVolume(anode, titan, "anode_logical");
     new G4PVPlacement(0, G4ThreeVector(0.,0.,20.*cm), anodeLogical, "anode_physical", fpWorldLogical, false, 0);
     
+    
+    // Lamp
+    
+    G4Ellipsoid *lamp = new G4Ellipsoid("lamp_solid", 10*cm, 20*cm, 40*cm, 0*cm, 0*cm);
+    
+    G4LogicalVolume *lampLogical = new G4LogicalVolume(lamp, mercury, "lamp_logical");
+    new G4PVPlacement(0, G4ThreeVector(0.,0.,0.*cm), lampLogical, "lamp_logical", fpWorldLogical, false, 0);
+    
+    
+                                        
+                                        
     ////////////////////////////////////////////////////////////////////////
     // Visualisation attributes
     
@@ -128,4 +147,27 @@ void FHDetectorConstruction::SetupGeometry()
     
     G4VisAttributes* anodeAttributes = new G4VisAttributes(G4Colour::Blue());
     anodeLogical->SetVisAttributes(anodeAttributes);
+    
+    G4VisAttributes* lampAttributes = new G4VisAttributes(G4Colour::G4Colour(1.,1.,1.,0.3));
+    lampLogical->SetVisAttributes(lampAttributes);
+    
 }
+
+
+void FHDetectorConstruction::SetupElectricFields() {
+    
+//    G4ElectricField
+    
+//    G4UniformElectricField* acceleratingField = new G4UniformElectricField(G4ThreeVector(0.,0.,20.));
+//    G4FieldManager *fieldManager = G4TransportationManager::GetTransportationManager()->GetFieldManager();
+//    fieldManager->SetDetectorField(acceleratingField);
+    
+    
+    FHAcceleratingElectricField* fieldSetup = new FHAcceleratingElectricField(G4ThreeVector(0.,0.,0.1));
+    G4AutoDelete::Register(fieldSetup); //Kernel will delete the messenger
+    fEmFieldSetup.Put(fieldSetup);
+    
+    
+}
+
+

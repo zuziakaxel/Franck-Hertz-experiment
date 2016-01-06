@@ -59,6 +59,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		325BBBCD1C3D63EF00DA0FCE /* FHAcceleratingElectricField.cc in Sources */ = {isa = PBXBuildFile; fileRef = 32BDF3361C273120003D3585 /* FHAcceleratingElectricField.cc */; };
 		3269C04E1C1CA41F00C32594 /* exampleB3.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3269C04A1C1CA41F00C32594 /* exampleB3.cc */; };
 		3269C04F1C1CA41F00C32594 /* FHDetectorConstruction.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3269C04B1C1CA41F00C32594 /* FHDetectorConstruction.cc */; };
 		3269C0501C1CA41F00C32594 /* FHPhysicsList.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3269C04C1C1CA41F00C32594 /* FHPhysicsList.cc */; };
@@ -120,6 +121,13 @@
 		3269C0531C1CA42B00C32594 /* FHDetectorConstruction.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FHDetectorConstruction.hh; sourceTree = "<group>"; };
 		3269C0541C1CA42B00C32594 /* FHPhysicsList.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FHPhysicsList.hh; sourceTree = "<group>"; };
 		3269C0551C1CA42B00C32594 /* FHPrimaryGeneratorAction.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FHPrimaryGeneratorAction.hh; sourceTree = "<group>"; };
+		32BDF3311C272F72003D3585 /* G4History.macro */ = {isa = PBXFileReference; lastKnownFileType = text; name = G4History.macro; path = Debug/G4History.macro; sourceTree = "<group>"; };
+		32BDF3321C272F72003D3585 /* init_vis.mac */ = {isa = PBXFileReference; lastKnownFileType = text; name = init_vis.mac; path = Debug/init_vis.mac; sourceTree = "<group>"; };
+		32BDF3331C272F72003D3585 /* run1.mac */ = {isa = PBXFileReference; lastKnownFileType = text; name = run1.mac; path = Debug/run1.mac; sourceTree = "<group>"; };
+		32BDF3341C272F72003D3585 /* run2.mac */ = {isa = PBXFileReference; lastKnownFileType = text; name = run2.mac; path = Debug/run2.mac; sourceTree = "<group>"; };
+		32BDF3351C272F72003D3585 /* vis.mac */ = {isa = PBXFileReference; lastKnownFileType = text; name = vis.mac; path = Debug/vis.mac; sourceTree = "<group>"; };
+		32BDF3361C273120003D3585 /* FHAcceleratingElectricField.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FHAcceleratingElectricField.cc; sourceTree = "<group>"; };
+		32BDF3371C273120003D3585 /* FHAcceleratingElectricField.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FHAcceleratingElectricField.hh; sourceTree = "<group>"; };
 		33E7C1C8D26446719395C634 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		7240C7E83EA74205AA02B62A /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		9F7EBE27DBF14EB3B16BDC2E /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
@@ -138,8 +146,29 @@
 		2A66D8AB936C432D96BDEAEC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				32BDF3311C272F72003D3585 /* G4History.macro */,
+				32BDF3321C272F72003D3585 /* init_vis.mac */,
+				32BDF3331C272F72003D3585 /* run1.mac */,
+				32BDF3341C272F72003D3585 /* run2.mac */,
+				32BDF3351C272F72003D3585 /* vis.mac */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		32BDF3391C273167003D3585 /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				32BDF3361C273120003D3585 /* FHAcceleratingElectricField.cc */,
+			);
+			name = Fields;
+			sourceTree = "<group>";
+		};
+		32BDF33A1C27316E003D3585 /* Fields */ = {
+			isa = PBXGroup;
+			children = (
+				32BDF3371C273120003D3585 /* FHAcceleratingElectricField.hh */,
+			);
+			name = Fields;
 			sourceTree = "<group>";
 		};
 		599434C089CD4C60A8FBBE5E /* Source Files */ = {
@@ -149,6 +178,7 @@
 				3269C04B1C1CA41F00C32594 /* FHDetectorConstruction.cc */,
 				3269C04C1C1CA41F00C32594 /* FHPhysicsList.cc */,
 				3269C04D1C1CA41F00C32594 /* FHPrimaryGeneratorAction.cc */,
+				32BDF3391C273167003D3585 /* Fields */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
@@ -172,6 +202,7 @@
 		A1E27E67D40E4BF1AA049EAE /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
+				32BDF33A1C27316E003D3585 /* Fields */,
 				3269C0521C1CA42B00C32594 /* B3ActionInitialization.hh */,
 				3269C0531C1CA42B00C32594 /* FHDetectorConstruction.hh */,
 				3269C0541C1CA42B00C32594 /* FHPhysicsList.hh */,
@@ -355,6 +386,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				325BBBCD1C3D63EF00DA0FCE /* FHAcceleratingElectricField.cc in Sources */,
 				3269C04F1C1CA41F00C32594 /* FHDetectorConstruction.cc in Sources */,
 				3269C04E1C1CA41F00C32594 /* exampleB3.cc in Sources */,
 				3269C0511C1CA41F00C32594 /* FHPrimaryGeneratorAction.cc in Sources */,

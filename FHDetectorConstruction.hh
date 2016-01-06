@@ -7,6 +7,16 @@
 #include "G4SystemOfUnits.hh"
 #include "G4PhysicalConstants.hh"
 
+// Fields
+#include "FHAcceleratingElectricField.hh"
+#include "G4UniformElectricField.hh"
+#include "G4TransportationManager.hh"
+#include "G4FieldManager.hh"
+#include "G4EqMagElectricField.hh"
+#include "G4ClassicalRK4.hh"
+#include "G4ChordFinder.hh"
+#include "G4Cache.hh"
+
 class G4LogicalVolume;
 class G4VPhysicalVolume;
 
@@ -28,10 +38,13 @@ private:
     // Helper methods
     void DefineMaterials();
     void SetupGeometry();
+    void SetupElectricFields();
     
     // World logical and physical volumes
     G4LogicalVolume*   fpWorldLogical;
     G4VPhysicalVolume* fpWorldPhysical;
+    
+    G4Cache<FHAcceleratingElectricField*> fEmFieldSetup;
     
 };
 

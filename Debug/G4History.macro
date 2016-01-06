@@ -61,20 +61,5 @@
 /vis/viewer/set/autoRefresh true
 /vis/viewer/refresh
 /vis/verbose warnings
-/control/execute run1.mac
-/vis/drawVolume
-/vis/scene/create
-/vis/scene/add/volume world
-/vis/scene/notifyHandlers
-/vis/sceneHandler/attach
-/vis/viewer/set/style wireframe
-/vis/viewer/refresh
-/vis/scene/add/axes 0 0 0 5 cm
-/vis/scene/notifyHandlers
-/vis/scene/add/trajectories smooth
-/tracking/storeTrajectory 2
-/vis/scene/notifyHandlers
-/vis/scene/endOfEventAction accumulate
 /run/beamOn 10
 /vis/scene/notifyHandlers scene-0
-/vis/scene/notifyHandlers scene-1
