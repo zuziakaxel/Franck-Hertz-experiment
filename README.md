@@ -26,8 +26,17 @@ Note that run.mac file should be in `debug` folder.
 or simply:
 `./exampleB1 run.mac`
 
+Now, you can also specify z-value of uniform electric field: `field/setAcceleration 15` (V) or `field/setValue` (V/m).
+
+Type: `/control/loop sim.mac var 1 15 1` to get electrons count for voltage in range (1,2,3...15).
 
 ####Environment variables needed:
 
 - *G4ENSDFSTATEDATA* : `path/to/G4ENSDFSTATE1.2`
 - *G4LEDATA* : `path/to/G4EMLOW6.48`
+
+####State
+
+- Still needs improvements in units.
+- `G4THitsMap.entries()` always returns `count = 5`, why? 😵
+- Application is crashing when mercury vapor density > 0.7 > g/cm3 (safety)
