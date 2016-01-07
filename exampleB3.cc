@@ -15,6 +15,8 @@
 #include "G4VisExecutive.hh"
 #include "G4UIExecutive.hh"
 
+#include "FHRunAction.hh"
+
 
 int main(int argc,char** argv) {
     
@@ -39,10 +41,10 @@ int main(int argc,char** argv) {
     // Mandatory initialization classes
     runManager->SetUserInitialization(new FHDetectorConstruction);
     runManager->SetUserInitialization(new FHPhysicsList);
-    
+
     // User action classes
     runManager->SetUserAction(new FHPrimaryGeneratorAction());
-    
+    runManager->SetUserAction(new FHRunAction());
 
     // Initialize visualization
     //
@@ -56,15 +58,21 @@ int main(int argc,char** argv) {
 
     // Process macro or start UI session
     //
+
     if ( ! ui ) { 
         // batch mode
         G4String command = "/control/execute ";
         G4String fileName = argv[1];
         UImanager->ApplyCommand(command+fileName);
+//        UImanager->ApplyCommand("/control/execute /Users/zuziakaxel/Development/Geant4/projects/FH/Debug/run1.mac");
+//        UImanager->ApplyCommand("/control/loop sim.mac var 1 15 1");
     } else {
         // interactive mode
         UImanager->ApplyCommand("/control/execute init_vis.mac");
+//        UImanager->ApplyCommand("/control/execute /Users/zuziakaxel/Development/Geant4/projects/FH/Debug/run1.mac");
+//        UImanager->ApplyCommand("/control/loop sim.mac var 1 15 1");
         ui->SessionStart();
+
         delete ui;
     }
 

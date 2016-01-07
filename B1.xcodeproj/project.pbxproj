@@ -64,6 +64,11 @@
 		3269C04F1C1CA41F00C32594 /* FHDetectorConstruction.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3269C04B1C1CA41F00C32594 /* FHDetectorConstruction.cc */; };
 		3269C0501C1CA41F00C32594 /* FHPhysicsList.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3269C04C1C1CA41F00C32594 /* FHPhysicsList.cc */; };
 		3269C0511C1CA41F00C32594 /* FHPrimaryGeneratorAction.cc in Sources */ = {isa = PBXBuildFile; fileRef = 3269C04D1C1CA41F00C32594 /* FHPrimaryGeneratorAction.cc */; };
+		32DC1B781C3DBBB80073401E /* BeamTestScoreParameterisation.cc in Sources */ = {isa = PBXBuildFile; fileRef = 32DC1B771C3DBBB80073401E /* BeamTestScoreParameterisation.cc */; };
+		32DC1B7B1C3DBEDC0073401E /* FHGUIManager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 32DC1B7A1C3DBEDC0073401E /* FHGUIManager.cc */; };
+		32DC1B7F1C3DC2340073401E /* FHFieldManager.cc in Sources */ = {isa = PBXBuildFile; fileRef = 32DC1B7E1C3DC2340073401E /* FHFieldManager.cc */; };
+		32DE420D1C3DAB5D0039BBF9 /* FHRunAction.cc in Sources */ = {isa = PBXBuildFile; fileRef = 32DE420B1C3DAB5D0039BBF9 /* FHRunAction.cc */; };
+		32DE42101C3DAC190039BBF9 /* FHRun.cc in Sources */ = {isa = PBXBuildFile; fileRef = 32DE420F1C3DAC190039BBF9 /* FHRun.cc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +133,16 @@
 		32BDF3351C272F72003D3585 /* vis.mac */ = {isa = PBXFileReference; lastKnownFileType = text; name = vis.mac; path = Debug/vis.mac; sourceTree = "<group>"; };
 		32BDF3361C273120003D3585 /* FHAcceleratingElectricField.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FHAcceleratingElectricField.cc; sourceTree = "<group>"; };
 		32BDF3371C273120003D3585 /* FHAcceleratingElectricField.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FHAcceleratingElectricField.hh; sourceTree = "<group>"; };
+		32DC1B771C3DBBB80073401E /* BeamTestScoreParameterisation.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BeamTestScoreParameterisation.cc; sourceTree = "<group>"; };
+		32DC1B791C3DBBC40073401E /* BeamTestScoreParameterisation.hh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BeamTestScoreParameterisation.hh; sourceTree = "<group>"; };
+		32DC1B7A1C3DBEDC0073401E /* FHGUIManager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FHGUIManager.cc; sourceTree = "<group>"; };
+		32DC1B7C1C3DBEE50073401E /* FHGUIManager.hh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FHGUIManager.hh; sourceTree = "<group>"; };
+		32DC1B7D1C3DC2230073401E /* FHFieldManager.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FHFieldManager.hh; sourceTree = "<group>"; };
+		32DC1B7E1C3DC2340073401E /* FHFieldManager.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FHFieldManager.cc; sourceTree = "<group>"; };
+		32DE420B1C3DAB5D0039BBF9 /* FHRunAction.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FHRunAction.cc; sourceTree = "<group>"; };
+		32DE420C1C3DAB5D0039BBF9 /* FHRunAction.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FHRunAction.hh; sourceTree = "<group>"; };
+		32DE420E1C3DAC0F0039BBF9 /* FHRun.hh */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FHRun.hh; sourceTree = "<group>"; };
+		32DE420F1C3DAC190039BBF9 /* FHRun.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FHRun.cc; sourceTree = "<group>"; };
 		33E7C1C8D26446719395C634 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		7240C7E83EA74205AA02B62A /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
 		9F7EBE27DBF14EB3B16BDC2E /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
@@ -159,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				32BDF3361C273120003D3585 /* FHAcceleratingElectricField.cc */,
+				32DC1B7E1C3DC2340073401E /* FHFieldManager.cc */,
 			);
 			name = Fields;
 			sourceTree = "<group>";
@@ -166,19 +182,41 @@
 		32BDF33A1C27316E003D3585 /* Fields */ = {
 			isa = PBXGroup;
 			children = (
+				32DC1B7D1C3DC2230073401E /* FHFieldManager.hh */,
 				32BDF3371C273120003D3585 /* FHAcceleratingElectricField.hh */,
 			);
 			name = Fields;
 			sourceTree = "<group>";
 		};
+		32DE42111C3DAC590039BBF9 /* Run */ = {
+			isa = PBXGroup;
+			children = (
+				32DE420B1C3DAB5D0039BBF9 /* FHRunAction.cc */,
+				32DE420F1C3DAC190039BBF9 /* FHRun.cc */,
+			);
+			name = Run;
+			sourceTree = "<group>";
+		};
+		32DE42121C3DAC610039BBF9 /* Run */ = {
+			isa = PBXGroup;
+			children = (
+				32DE420E1C3DAC0F0039BBF9 /* FHRun.hh */,
+				32DE420C1C3DAB5D0039BBF9 /* FHRunAction.hh */,
+			);
+			name = Run;
+			sourceTree = "<group>";
+		};
 		599434C089CD4C60A8FBBE5E /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
+				32DC1B7A1C3DBEDC0073401E /* FHGUIManager.cc */,
+				32DC1B771C3DBBB80073401E /* BeamTestScoreParameterisation.cc */,
 				3269C04A1C1CA41F00C32594 /* exampleB3.cc */,
 				3269C04B1C1CA41F00C32594 /* FHDetectorConstruction.cc */,
 				3269C04C1C1CA41F00C32594 /* FHPhysicsList.cc */,
 				3269C04D1C1CA41F00C32594 /* FHPrimaryGeneratorAction.cc */,
 				32BDF3391C273167003D3585 /* Fields */,
+				32DE42111C3DAC590039BBF9 /* Run */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
@@ -202,6 +240,9 @@
 		A1E27E67D40E4BF1AA049EAE /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
+				32DC1B7C1C3DBEE50073401E /* FHGUIManager.hh */,
+				32DC1B791C3DBBC40073401E /* BeamTestScoreParameterisation.hh */,
+				32DE42121C3DAC610039BBF9 /* Run */,
 				32BDF33A1C27316E003D3585 /* Fields */,
 				3269C0521C1CA42B00C32594 /* B3ActionInitialization.hh */,
 				3269C0531C1CA42B00C32594 /* FHDetectorConstruction.hh */,
@@ -388,7 +429,12 @@
 			files = (
 				325BBBCD1C3D63EF00DA0FCE /* FHAcceleratingElectricField.cc in Sources */,
 				3269C04F1C1CA41F00C32594 /* FHDetectorConstruction.cc in Sources */,
+				32DC1B7B1C3DBEDC0073401E /* FHGUIManager.cc in Sources */,
+				32DC1B781C3DBBB80073401E /* BeamTestScoreParameterisation.cc in Sources */,
+				32DC1B7F1C3DC2340073401E /* FHFieldManager.cc in Sources */,
 				3269C04E1C1CA41F00C32594 /* exampleB3.cc in Sources */,
+				32DE42101C3DAC190039BBF9 /* FHRun.cc in Sources */,
+				32DE420D1C3DAB5D0039BBF9 /* FHRunAction.cc in Sources */,
 				3269C0511C1CA41F00C32594 /* FHPrimaryGeneratorAction.cc in Sources */,
 				3269C0501C1CA41F00C32594 /* FHPhysicsList.cc in Sources */,
 			);

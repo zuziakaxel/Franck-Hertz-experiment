@@ -1,0 +1,36 @@
+dependencies: \
+  /Users/zuziakaxel/Development/Geant4/projects/FH/FHFieldManager.cc \
+  /Users/zuziakaxel/Development/Geant4/projects/fh/FHFieldManager.hh \
+  /Users/zuziakaxel/Development/Geant4/projects/fh/FHAcceleratingElectricField.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ElectricField.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4Types.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/tls.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ElectroMagneticField.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4Field.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/globals.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ios.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4String.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4String.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/templates.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ExceptionSeverity.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4UniformElectricField.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ThreeVector.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Vector/ThreeVector.h \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Utility/defs.h \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Vector/ThreeVector.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4Cache.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4CacheDetails.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4Threading.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4AutoLock.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4SystemOfUnits.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/externals/clhep/include/CLHEP/Units/SystemOfUnits.h \
+  /Users/zuziakaxel/Development/Geant4/projects/fh/FHGUIManager.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UImessenger.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UIdirectory.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UIcommand.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UIparameter.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UItokenNum.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ApplicationState.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UIcmdWithADouble.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4AutoDelete.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ThreadLocalSingleton.hh

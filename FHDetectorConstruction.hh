@@ -16,9 +16,11 @@
 #include "G4ClassicalRK4.hh"
 #include "G4ChordFinder.hh"
 #include "G4Cache.hh"
+#include "FHGUIManager.hh"
 
 class G4LogicalVolume;
 class G4VPhysicalVolume;
+class FHGUIManager;
 
 class FHDetectorConstruction : public G4VUserDetectorConstruction {
     
@@ -39,13 +41,14 @@ private:
     void DefineMaterials();
     void SetupGeometry();
     void SetupElectricFields();
+    void SetupScoring(G4LogicalVolume* scoringVolume);
     
     // World logical and physical volumes
     G4LogicalVolume*   fpWorldLogical;
     G4VPhysicalVolume* fpWorldPhysical;
     
     G4Cache<FHAcceleratingElectricField*> fEmFieldSetup;
-    
+    FHGUIManager guiManager;
 };
 
 #endif

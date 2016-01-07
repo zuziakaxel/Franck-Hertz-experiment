@@ -269,6 +269,8 @@ dependencies: \
   /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ChordFinder.icc \
   /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4Cache.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4CacheDetails.hh \
+  /Users/zuziakaxel/Development/Geant4/projects/fh/FHGUIManager.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UIcmdWithADouble.hh \
   /Users/zuziakaxel/Development/Geant4/projects/fh/FHPhysicsList.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/run/include/G4VUserPhysicsList.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/run/include/rundefs.hh \
@@ -354,4 +356,6 @@ dependencies: \
   /Users/zuziakaxel/Development/Geant4/geant4/source/visualization/OpenGL/include/G4OpenGLStoredQt.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/visualization/RayTracer/include/G4RayTracerX.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/interfaces/basic/include/G4UIExecutive.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/interfaces/basic/include/G4VUIshell.hh
+  /Users/zuziakaxel/Development/Geant4/geant4/source/interfaces/basic/include/G4VUIshell.hh \
+  /Users/zuziakaxel/Development/Geant4/projects/fh/FHRunAction.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/run/include/G4UserRunAction.hh

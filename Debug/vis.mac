@@ -1,11 +1,15 @@
-# Macro file for the visualization setting in the initialization phase 
+# Macro file for the visualization setting in the initialization phase
 # of the B1 example when running in interactive mode
 #
 
 # Use these open statements to open selected visualization
 #
 # Use this open statement to create an OpenGL view:
+#IMPORTANT! COMMENT LINE BELOW TO TURN OFF VISUALIZATION!!
+
 /vis/open OGL 600x600-0+0
+
+
 #
 # Use this open statement to create an OpenInventor view:
 #/vis/open OI

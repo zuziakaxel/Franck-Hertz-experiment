@@ -88,7 +88,7 @@ fStepperType(4),    // ClassicalRK4 -- the default stepper
 fMinStep(0.010*mm)  // minimal step of 10 microns
 {
     fEMfield = new G4UniformElectricField(
-                                          G4ThreeVector(0.0,100000.0*kilovolt/cm,0.0));
+                                          G4ThreeVector(0.0,0.138*kilovolt/cm,0.0));
     fEquation = new G4EqMagElectricField(fEMfield);
     
     fFieldManager = GetGlobalFieldManager();
@@ -209,8 +209,7 @@ void FHAcceleratingElectricField::SetStepper()
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void FHAcceleratingElectricField::SetFieldValue(G4double fieldValue)
-{
+void FHAcceleratingElectricField::SetFieldValue(G4double fieldValue) {
     // Set the value of the Global Field to fieldValue along Z
     
     G4ThreeVector fieldVector( 0.0, 0.0, fieldValue );

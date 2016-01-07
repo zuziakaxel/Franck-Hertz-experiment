@@ -13,6 +13,15 @@
 #include "FHAcceleratingElectricField.hh"
 
 #include "G4AutoDelete.hh"
+#include "G4MultiFunctionalDetector.hh"
+#include "G4SDManager.hh"
+#include "G4PSSphereSurfaceCurrent.hh"
+#include "G4SDParticleFilter.hh"
+#include "G4VSDFilter.hh"
+#include "G4SDChargedFilter.hh"
+#include "BeamTestScoreParameterisation.hh"
+
+#include "FHFieldManager.hh"
 
 FHDetectorConstruction::FHDetectorConstruction()
 :fpWorldLogical(0)
@@ -32,7 +41,7 @@ G4VPhysicalVolume* FHDetectorConstruction::Construct()
     // Field Setup
     SetupElectricFields();
     
-    
+//    guiManager = FHGUIManager();
     // Return world volume
     return fpWorldPhysical;
 }
@@ -66,9 +75,11 @@ void FHDetectorConstruction::DefineMaterials()
     vacuum->AddMaterial(air, fractionmass=1.);
     
     //Mercury
-    G4NistManager *nistman = G4NistManager::Instance();
-    nistman->FindOrBuildElement(20);
-    new G4Material("Mercury", 20., 200.59*g/mole, 8*g/cm3);
+
+    new G4Material("Mercury", z=80., 200.59*g/mole, 0.07*g/cm3);
+    
+
+    
     // Dump material information
     G4cout << *(G4Material::GetMaterialTable()) << G4endl;
 }
@@ -77,6 +88,7 @@ void FHDetectorConstruction::SetupGeometry()
 {
     // NIST definition of air
     G4Material* mercury = G4Material::GetMaterial("Mercury");
+    G4Material* vacuum = G4Material::GetMaterial("Vacuum");
 //    G4Material* mercury = new G4Material("Mercury", 20., 200.59*g/mole, 8*g/cm3);
     
     // World volume
@@ -84,7 +96,7 @@ void FHDetectorConstruction::SetupGeometry()
                                   2.0*m, 2.0*m, 2.0*m);    // Half lengths
     
     fpWorldLogical = new G4LogicalVolume(worldSolid,	 // Solid
-                                         mercury,	         // Material
+                                         vacuum,	         // Material
                                          "World_Logical"); // Name
     
     fpWorldPhysical = new G4PVPlacement(0,	         // Rotation matrix pointer
@@ -97,36 +109,35 @@ void FHDetectorConstruction::SetupGeometry()
     
     ////////////////////////////////////////////////////////////////////////
     // - Katode (-)
-    //TODO: Change material for elements below!
+    //TODO: Change materials for elements below!
     
-    G4Material* titan = G4Material::GetMaterial("Titanium");
-    G4Box* katode = new G4Box("katode_solid", 2.5*cm , 5.0*cm, 0.1*cm);
+    G4Box* katode = new G4Box("katode_solid", 2.5*mm , 5.0*mm, 0.1*mm);
     
-    G4LogicalVolume *katodeLogical = new G4LogicalVolume(katode, titan, "katode_logical");
-    new G4PVPlacement(0, G4ThreeVector(0.,0.,-(20*cm)), katodeLogical, "katode_physical", fpWorldLogical, false, 0);
+    G4LogicalVolume *katodeLogical = new G4LogicalVolume(katode, mercury, "katode_logical");
+    new G4PVPlacement(0, G4ThreeVector(0.,0.,-(20*mm)), katodeLogical, "katode_physical", fpWorldLogical, false, 0);
     
     // Grid (+)
     
-    G4Box* grid = new G4Box("grid_solid", 2.5*cm , 5.0*cm, 0.1*cm);
+    G4Box* grid = new G4Box("grid_solid", 2.5*mm , 5.0*mm, 0.1*mm);
     
-    G4LogicalVolume *gridLogical = new G4LogicalVolume(grid, titan, "grid_logical");
-    new G4PVPlacement(0, G4ThreeVector(0.,0.,16.*cm), gridLogical, "grid_physical", fpWorldLogical, false, 0);
+    G4LogicalVolume *gridLogical = new G4LogicalVolume(grid, mercury, "grid_logical");
+    new G4PVPlacement(0, G4ThreeVector(0.,0.,16.*mm), gridLogical, "grid_physical", fpWorldLogical, false, 0);
     
     
     // Anode
 
-    G4Box* anode = new G4Box("anode_solid", 2.5*cm , 5.0*cm, 0.1*cm);
+    G4Box* anode = new G4Box("anode_solid", 2.5*mm , 5.0*mm, 0.1*mm);
     
-    G4LogicalVolume *anodeLogical = new G4LogicalVolume(anode, titan, "anode_logical");
-    new G4PVPlacement(0, G4ThreeVector(0.,0.,20.*cm), anodeLogical, "anode_physical", fpWorldLogical, false, 0);
+    G4LogicalVolume *anodeLogical = new G4LogicalVolume(anode, vacuum, "anode_logical");
+    new G4PVPlacement(0, G4ThreeVector(0.,0.,20.*mm), anodeLogical, "anode_physical", fpWorldLogical, false, 0);
     
-    
+//    SetupScoring(anodeLogical);
     // Lamp
     
-    G4Ellipsoid *lamp = new G4Ellipsoid("lamp_solid", 10*cm, 20*cm, 40*cm, 0*cm, 0*cm);
+    G4Ellipsoid *lamp = new G4Ellipsoid("lamp_solid", 10*mm, 20*mm, 40*mm, 0*mm, 0*mm);
     
     G4LogicalVolume *lampLogical = new G4LogicalVolume(lamp, mercury, "lamp_logical");
-    new G4PVPlacement(0, G4ThreeVector(0.,0.,0.*cm), lampLogical, "lamp_logical", fpWorldLogical, false, 0);
+    new G4PVPlacement(0, G4ThreeVector(0.,0.,0.*mm), lampLogical, "lamp_logical", fpWorldLogical, false, 0);
     
     
                                         
@@ -151,6 +162,63 @@ void FHDetectorConstruction::SetupGeometry()
     G4VisAttributes* lampAttributes = new G4VisAttributes(G4Colour::G4Colour(1.,1.,1.,0.3));
     lampLogical->SetVisAttributes(lampAttributes);
     
+    
+    
+    // Mother sphere
+    G4double innerRadius = 1.5*cm;
+    G4double outerRadius = 1.51*cm;
+    
+    G4VSolid* sphereSolid = new G4Sphere("Sphere_Solid",   // Name
+                                         innerRadius,    // Inner radius
+                                         outerRadius,    // Outer radius
+                                         0.*deg,         // Starting phi
+                                         360.*deg,       // Delta phi
+                                         0.*deg,         // Starting theta
+                                         180.*deg);      // Delta theta
+    
+    G4LogicalVolume* sphereLogical =
+    new G4LogicalVolume(sphereSolid, vacuum, "Sphere_Logical");
+    
+    
+    new G4PVPlacement(0, G4ThreeVector(0.,0.,10.*mm), sphereLogical, "Sphere_Physical",
+                      fpWorldLogical, false, 0);
+    
+    // 10 scoring rings
+    G4double deltaTheta = 6.*deg;
+    
+    G4VSolid* scoreSolid = new G4Sphere("Score_Solid",   // Name
+                                        innerRadius,   // Inner radius
+                                        outerRadius,   // Outer radius
+                                        0.*deg,        // Starting phi
+                                        360.*deg,      // Delta phi
+                                        0.*deg,        // Starting theta
+                                        deltaTheta);   // Delta theta
+    
+    G4LogicalVolume* fScoreLogical =
+    new G4LogicalVolume(scoreSolid, vacuum, "scoreLog");
+    
+    BeamTestScoreParameterisation* param =
+    new BeamTestScoreParameterisation(innerRadius, outerRadius, deltaTheta);
+    
+    new G4PVParameterised("scorePhys",   // Name
+                          fScoreLogical, // Logical volume
+                          sphereLogical, // Mother volume
+                          kZAxis,        // Axis
+                          10,            // Number of replicas
+                          param);        // Parameterisation
+    
+    // Mother sphere
+    G4VisAttributes* sphereAttributes =
+    new G4VisAttributes(G4Colour(1.0,1.0,1.0,0.2));
+    sphereAttributes->SetVisibility(false);
+    sphereLogical->SetVisAttributes(sphereAttributes);
+    
+    // Ring scoring volumes. Green with transparancy.
+    G4VisAttributes* scoreAttributes =
+    new G4VisAttributes(G4Colour(0.0,1.0,0.0,0.2));
+    scoreAttributes->SetVisibility(true);
+    fScoreLogical->SetVisAttributes(scoreAttributes);
+    SetupScoring(fScoreLogical);
 }
 
 
@@ -163,11 +231,39 @@ void FHDetectorConstruction::SetupElectricFields() {
 //    fieldManager->SetDetectorField(acceleratingField);
     
     
-    FHAcceleratingElectricField* fieldSetup = new FHAcceleratingElectricField(G4ThreeVector(0.,0.,0.1));
-    G4AutoDelete::Register(fieldSetup); //Kernel will delete the messenger
-    fEmFieldSetup.Put(fieldSetup);
+//    FHAcceleratingElectricField* fieldSetup = new FHAcceleratingElectricField(G4ThreeVector(0.,0.,-14.*volt/m));
+//    G4AutoDelete::Register(fieldSetup); //Kernel will delete the messenger
+//    fEmFieldSetup.Put(fieldSetup);
+
     
+    FHFieldManager::getInstance()->setFieldValue(G4ThreeVector(0.,0.,-300.*volt/m));
+}
+
+void FHDetectorConstruction::SetupScoring(G4LogicalVolume* scoringVolume) {
+    // Create a new sensitive detector named "MyDetector"
+    G4MultiFunctionalDetector* detector =
+    new G4MultiFunctionalDetector("FHDetector");
+//    fScoreLog->SetSensitiveDetector(detector);
+    // Get pointer to detector manager
+    G4SDManager* manager = G4SDManager::GetSDMpointer();
     
+    // Register detector with manager
+    manager->AddNewDetector(detector);
+    
+    // Attach detector to scoring volume
+    scoringVolume->SetSensitiveDetector(detector);
+    
+    // Create a primitive Scorer named FHScorer
+    G4PSSphereSurfaceCurrent* scorer =
+    new G4PSSphereSurfaceCurrent("FHScorer",fCurrent_In);
+    
+    G4VSDFilter* electronFilter = new G4SDChargedFilter("electronFilter");
+//    G4SDChargedFilter
+//    electronFilter->Add("e-");
+    scorer->SetFilter(electronFilter);
+    
+    // Register scorer with detector
+    detector->RegisterPrimitive(scorer);  
 }
 
 

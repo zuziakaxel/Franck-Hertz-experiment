@@ -1,0 +1,19 @@
+dependencies: \
+  /Users/zuziakaxel/Development/Geant4/projects/FH/FHRunAction.cc \
+  /Users/zuziakaxel/Development/Geant4/projects/fh/FHRunAction.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/run/include/G4UserRunAction.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4Types.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/tls.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/run/include/G4Run.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/globals.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ios.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4String.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4String.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/templates.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ExceptionSeverity.hh \
+  /Users/zuziakaxel/Development/Geant4/projects/fh/FHRun.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/hits/include/G4THitsMap.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/hits/include/G4THitsCollection.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/hits/include/G4VHitsCollection.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4Allocator.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4AllocatorPool.hh

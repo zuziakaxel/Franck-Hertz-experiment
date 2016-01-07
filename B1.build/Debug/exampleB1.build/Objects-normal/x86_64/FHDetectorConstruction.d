@@ -120,6 +120,14 @@ dependencies: \
   /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/magneticfield/include/G4ChordFinder.icc \
   /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4Cache.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4CacheDetails.hh \
+  /Users/zuziakaxel/Development/Geant4/projects/fh/FHGUIManager.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UImessenger.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UIdirectory.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UIcommand.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UIparameter.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UItokenNum.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ApplicationState.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UIcmdWithADouble.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/solids/CSG/include/G4Box.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/solids/CSG/include/G4CSGSolid.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/graphics_reps/include/G4Polyhedron.hh \
@@ -272,12 +280,6 @@ dependencies: \
   /Users/zuziakaxel/Development/Geant4/geant4/source/tracking/include/G4UserSteppingAction.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/tracking/include/G4VSteppingVerbose.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/tracking/include/G4TrackingMessenger.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UImessenger.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UIdirectory.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UIcommand.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UIparameter.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/intercoms/include/G4UItokenNum.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ApplicationState.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/tracking/include/G4UserTrackingAction.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/event/include/G4Event.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/particles/management/include/G4PrimaryVertex.hh \
@@ -298,4 +300,25 @@ dependencies: \
   /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/solids/specific/include/G4Ellipsoid.hh \
   /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/solids/specific/include/G4Ellipsoid.icc \
   /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4AutoDelete.hh \
-  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ThreadLocalSingleton.hh
+  /Users/zuziakaxel/Development/Geant4/geant4/source/global/management/include/G4ThreadLocalSingleton.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/detector/include/G4MultiFunctionalDetector.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/detector/include/G4VSensitiveDetector.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/hits/include/G4VHit.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/detector/include/G4VReadOutGeometry.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/detector/include/G4SensitiveVolumeList.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/detector/include/G4CollectionNameVector.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/detector/include/G4VSDFilter.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/detector/include/G4SDManager.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/detector/include/G4SDStructure.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/detector/include/G4HCtable.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/scorer/include/G4PSSphereSurfaceCurrent.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/detector/include/G4VPrimitiveScorer.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/hits/include/G4THitsMap.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/hits/include/G4THitsCollection.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/solids/CSG/include/G4Sphere.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/geometry/solids/CSG/include/G4Sphere.icc \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/scorer/include/G4PSDirectionFlag.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/scorer/include/G4SDParticleFilter.hh \
+  /Users/zuziakaxel/Development/Geant4/geant4/source/digits_hits/scorer/include/G4SDChargedFilter.hh \
+  /Users/zuziakaxel/Development/Geant4/projects/fh/BeamTestScoreParameterisation.hh \
+  /Users/zuziakaxel/Development/Geant4/projects/fh/FHFieldManager.hh
