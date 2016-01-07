@@ -15,12 +15,19 @@ http://hyperphysics.phy-astr.gsu.edu/hbase/FrHz.html#FH
     i analizy wyników.
 
 
+####Features:
+
+- data is saved to file `wyniki.dat` in format `"Us [V]     electrons count"`
+- multiple execution with `/control/loop sim.mac var 1 15 1` - (start end increment)
+- qt, openGL support
+- Xcode ready 🤘
 
 ####How to run:
 
 - Optionally build using Xcode 🤓
 - Locate executable file: `debug/exampleB1`
 - run: `./exampleB1`
+- you can turn on/off vis in file `vis.mac` by (un)commenting 10th line (for complex computings)
 - `Idle> /control/execute run.mac`
 Note that run.mac file should be in `debug` folder.
 or simply:
