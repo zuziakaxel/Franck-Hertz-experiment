@@ -76,7 +76,7 @@ void FHDetectorConstruction::DefineMaterials()
     
     //Mercury
 
-    new G4Material("Mercury", z=80., 200.59*g/mole, 0.07*g/cm3);
+    new G4Material("Mercury", z=80., 200.59*g/mole, 80*mg/cm3);
     
 
     
@@ -177,14 +177,14 @@ void FHDetectorConstruction::SetupGeometry()
                                          180.*deg);      // Delta theta
     
     G4LogicalVolume* sphereLogical =
-    new G4LogicalVolume(sphereSolid, vacuum, "Sphere_Logical");
+    new G4LogicalVolume(sphereSolid, mercury, "Sphere_Logical");
     
     
     new G4PVPlacement(0, G4ThreeVector(0.,0.,10.*mm), sphereLogical, "Sphere_Physical",
                       fpWorldLogical, false, 0);
     
     // 10 scoring rings
-    G4double deltaTheta = 6.*deg;
+    G4double deltaTheta = 60.*deg;
     
     G4VSolid* scoreSolid = new G4Sphere("Score_Solid",   // Name
                                         innerRadius,   // Inner radius
@@ -204,7 +204,7 @@ void FHDetectorConstruction::SetupGeometry()
                           fScoreLogical, // Logical volume
                           sphereLogical, // Mother volume
                           kZAxis,        // Axis
-                          10,            // Number of replicas
+                          1,            // Number of replicas
                           param);        // Parameterisation
     
     // Mother sphere
@@ -257,10 +257,10 @@ void FHDetectorConstruction::SetupScoring(G4LogicalVolume* scoringVolume) {
     G4PSSphereSurfaceCurrent* scorer =
     new G4PSSphereSurfaceCurrent("FHScorer",fCurrent_In);
     
-    G4VSDFilter* electronFilter = new G4SDChargedFilter("electronFilter");
+//    G4VSDFilter* electronFilter = new G4SDChargedFilter("electronFilter");
 //    G4SDChargedFilter
 //    electronFilter->Add("e-");
-    scorer->SetFilter(electronFilter);
+//    scorer->SetFilter(electronFilter);
     
     // Register scorer with detector
     detector->RegisterPrimitive(scorer);  

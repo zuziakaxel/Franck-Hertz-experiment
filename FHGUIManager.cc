@@ -12,7 +12,7 @@
 #include "FHDetectorConstruction.hh"
 #include "FHFieldManager.hh"
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+//
 
 FHGUIManager::FHGUIManager() {
     
@@ -31,14 +31,14 @@ FHGUIManager::FHGUIManager() {
     fFieldAcceleration->AvailableForStates(G4State_PreInit,G4State_Idle);
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+//
 
 FHGUIManager::~FHGUIManager() {
 //    delete fDetDir;
 //    delete fFieldValue;
 }
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+//
 
 void FHGUIManager::SetNewValue( G4UIcommand* command, G4String newValue) {
     if( command == fFieldValue ) {

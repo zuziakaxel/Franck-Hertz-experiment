@@ -36,7 +36,7 @@
 /// Action initialization class.
 ///
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+//
 
 class B3ActionInitialization : public G4VUserActionInitialization
 {
@@ -49,7 +49,7 @@ class B3ActionInitialization : public G4VUserActionInitialization
 
 };
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+//
 
 #endif
 
