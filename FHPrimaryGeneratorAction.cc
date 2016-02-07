@@ -19,7 +19,7 @@ FHPrimaryGeneratorAction::FHPrimaryGeneratorAction() {
     
     particleGun->SetParticleDefinition(particle);
     particleGun->SetParticleMomentumDirection(G4ThreeVector(0.,0.,1.));
-    particleGun->SetParticleEnergy(0.002*eV);
+    particleGun->SetParticleEnergy(0.00001*eV);
     particleGun->SetParticlePosition(G4ThreeVector(0.,0.,-20.*mm));
 }
 

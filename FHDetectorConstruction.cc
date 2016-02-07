@@ -75,10 +75,26 @@ void FHDetectorConstruction::DefineMaterials()
     vacuum->AddMaterial(air, fractionmass=1.);
     
     //Mercury
+    G4Element* merc  = new G4Element("Mercury",symbol="Hg" , z= 80., a=200*g/mole);
 
-    new G4Material("Mercury", z=80., 200.59*g/mole, 80*mg/cm3);
+//    G4Element *merc = new G4Element("Mercury", "Hg", z=80., 200.59*g/mole, 70*mg/cm3);
+//    G4String name, symbol;             // a=mass of a mole;
+//    G4double a, z, density;            // z=mean number of protons;
+//    G4int iz, n;                       //iz=nb of protons  in an isotope;
+    // n=nb of nucleons in an isotope;
     
-
+//    G4int ncomponents, natoms;
+//    G4double abundance, fractionmass;
+    G4double temperature, pressure;
+    density     = 60*mg/cm3;
+    pressure    = 100.*hep_pascal;
+    temperature = 388.*kelvin;
+    G4Material* mer = new G4Material("MercuryVapour", density, ncomponents=1,kStateGas,temperature,pressure);
+    mer->AddElement(merc,0.9);
+    
+//NEON
+    
+    
     
     // Dump material information
     G4cout << *(G4Material::GetMaterialTable()) << G4endl;
@@ -87,7 +103,7 @@ void FHDetectorConstruction::DefineMaterials()
 void FHDetectorConstruction::SetupGeometry()
 {
     // NIST definition of air
-    G4Material* mercury = G4Material::GetMaterial("Mercury");
+    G4Material* mercury = G4Material::GetMaterial("MercuryVapour");
     G4Material* vacuum = G4Material::GetMaterial("Vacuum");
 //    G4Material* mercury = new G4Material("Mercury", 20., 200.59*g/mole, 8*g/cm3);
     

@@ -1,7 +1,7 @@
 reset
-set terminal epslatex size 13cm,9cm color colortext
-#set terminal png
-set output 'wyk2.tex'
+#set terminal epslatex size 13cm,9cm color colortext
+set terminal png
+set output 'wyk3.png'
 set grid
 set style line 1 linecolor rgb '#314F77' linetype 1 linewidth 2
 set xlabel "U [V]"
